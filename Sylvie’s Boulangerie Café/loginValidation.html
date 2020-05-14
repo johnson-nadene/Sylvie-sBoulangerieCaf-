@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+	<meta charset="utf-8">
+	<title>Login Validation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+		<script>
+
+	function validateForm(){
+	 var memberId = document.getElementById('memberId');
+     var password = document.getElementById('password');
+	 var user = "sylvie";
+	 var pass = "1234";
+	 
+		if (memberId.value == user){
+			if(password.value == pass){
+				alert("Welcome back " + memberId.value + "!");
+				open("upcomingevents.html");
+			} else {
+				alert("Incorrect username or password!");
+				
+			}
+		}else{
+			alert("Incorrect username or password!");
+		}
+	
+	}
+	</script>
+	</head>
+	
+	<body OnLoad="document.loginform.memberId.focus();">
+		<div class="container">
+		<div class="logo">
+			<a href="#">Sylvie’s Boulangerie Café</a>
+		</div>
+			<div class="navi">
+				<a href="index.html">HOME</a>
+				<div class="dropdown">
+				<button class="dropbtn">ABOUT US
+					<i class="fa fa-caret-down"></i>
+				</button>
+					<div class="dropdown-content">
+						<a href="upcomingevents.html">UPCOMING EVENTS</a>
+					</div>
+				</div>	
+				<div class="dropdown">
+				<button class="dropbtn">ORDER
+					<i class="fa fa-caret-down"></i>
+				</button>
+					<div class="dropdown-content">
+						<a href="menu.html">MENU</a>
+						<a href="cateringmenu.html">CATERING MENU</a>
+					</div>
+				</div>
+				<a href="photogallery.html">PHOTO GALLERY </a>
+				<a href="reviews.html">REVIEWS </a>	
+				<a href="contactus.html">CONTACT US </a>	
+			</div>
+			<div class="login">
+			<a href="loginValidation.html">Login</a>
+		</div>
+	</div>	
+	<div class="mainp">
+	<h1>Login to Sylvie’s Boulangerie Café</h1>
+	<form name="loginform" onsubmit="return validateForm()" method="post">
+	Member Number: <input type="text" id="memberId" onfocus=""><br>
+	Password: <input type="password" id="password" onfocus="">
+	<button onclick="setTimeout(validateForm, 300)">Login</button>
+	</form> 
+	</div>
+		<div class="footer">
+			<p>Copyright © Sylvie’s Boulangerie Café | All Rights Reserved </p>
+		</div>	
+	</body>
+	</html>

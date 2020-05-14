@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+	<meta charset="utf-8">
+	<title>Sylvie’s Boulangerie Café/Order</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script>
+	function validateForm() {
+		var x = document.forms["contact"]["name"].value;
+		var y = document.forms["contact"]["email"].value;
+		var z = document.forms["contact"]["comments"].value;
+		if (x == "" || y == "" || z == "") {
+			alert("This must be filled out");
+			return false;
+		} else {
+			alert("Thank you!");
+			}
+	}	
+	</script>
+	</head>
+	<body>
+	<div class="container">
+		<div class="logo">
+			<a href="#">Sylvie’s Boulangerie Café</a>
+		</div>
+			<div class="navi">
+				<a href="index.html">HOME</a>
+				<div class="dropdown">
+				<button class="dropbtn">ABOUT US
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="upcomingevents.html">UPCOMING EVENTS</a>
+				</div>
+				</div>	
+				<div class="dropdown">
+				<button class="dropbtn">ORDER
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="menu.html">MENU</a>
+					<a href="cateringmenu.html">CATERING MENU</a>
+				</div>
+				</div>
+				<a href="photogallery.html">PHOTO GALLERY </a>
+				<a href="reviews.html">REVIEWS </a>	
+				<a href="contactus.html">CONTACT US </a>	
+			</div>
+			<div class="login">
+			<a href="loginValidation.html">Login</a>
+		</div>
+	</div>	
+<main>
+<div class="mainsec">
+<h1>Contact Us</h1>
+<p>We want to hear from you</p>
+<p>Please let us know!</p>
+<div class="meringue cookies">
+<img src="img/meringuecookies.jpg" alt="meringue cookies" width="200" height="350" class="float right">
+</div>
+<form id= "contact" onsubmit="return validateForm()" method="post">
+<label for="Name">Name </label> <br>
+<input type="text" name="name" id="name" required > <br><br>
+<label for="myEmail">Email </label> <br>
+<input type= "email" name="email" id="myEmail" required ><br><br>
+<label for="Comments">Comments </label> <br>
+<textarea type="text" id="comments" rows="4" cols="40" required ></textarea><br>
+<input type= "submit" value= "Submit" id="submit"><br>
+</form>
+
+</div>
+</main>
+		<div class="footer">
+			<p>Copyright © Sylvie’s Boulangerie Café | All Rights Reserved </p>
+		</div>	
+</body>
+			
+</html>
